@@ -1,1 +1,217 @@
 # Deface-html-1
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Madina Cyber Team</title>
+<meta name="theme-color" content="black"/>
+<meta property="og:image" content="https://e.top4top.io/p_24180cst90.jpg">
+<meta name="description" content="{ madina cyber team }">
+
+<link href="https://fonts.googleapis.com/css?family=Kelly+Slab" rel="stylesheet">
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body {
+    margin:0;
+    background:black;
+    color:white;
+    font-family:'Kelly Slab', cursive;
+    overflow-x:hidden;
+}
+
+/* ANIMASI GARIS LURUS PUTIH KE BAWAH SAAT AWAL DIBUKA */
+body::before {
+    content:'';
+    position:fixed;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:2px;
+    height:0;
+    background:white;
+    z-index:9999;
+    animation:garisTurun 1.5s ease-out forwards;
+}
+
+@keyframes garisTurun {
+    0% {
+        height:0;
+        opacity:1;
+    }
+    80% {
+        height:100vh;
+        opacity:1;
+    }
+    100% {
+        height:100vh;
+        opacity:0;
+    }
+}
+
+.tengahken {
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:10px;
+}
+
+/* TEKS KEDIP */
+m{
+    animation:faymek 1s alternate infinite;
+    color:black;
+    background:white;
+    padding:5px 10px;
+}
+
+/* GAMBAR RESPONSIVE + ANIMASI ASLI */
+img{
+    width:130vw;
+    max-width:350px;
+    height:auto;
+    animation:fayimg 2s;
+}
+
+/* ANIMASI GARIS TURUN (TETAP DIPERTAHANKAN) */
+@keyframes fayimg{
+    0%{
+        width:0px;
+        height:0px;
+    }
+    20%{
+        height:0;
+    }
+    30%{
+        width:0px;
+        height:0;
+    }
+    80%{
+        width:0;
+        height:70vh;
+    }
+    100%{
+        width:90vw;
+        max-width:600px;
+        height:auto;
+    }
+}
+
+marquee{
+    border:1px solid red;
+    padding:5px;
+    max-width:90vw;
+}
+
+/* ANIMASI KEDIP */
+@keyframes faymek{
+    0%{background:black;}
+    10%{background:red;}
+    30%{background:black;}
+    40%{background:red;}
+    49%{background:black;}
+    60%{background:red;}
+    63%{background:black;}
+    69%{background:red;}
+}
+
+/* RESPONSIVE TEKS */
+.title{
+    font-size:7vw;
+}
+@media(min-width:600px){
+    .title{
+        font-size:42px;
+    }
+}
+.subtitle{
+    font-size:5vw;
+}
+@media(min-width:600px){
+    .subtitle{
+        font-size:28px;
+    }
+}
+
+/* AUDIO TERSEMBUNYI */
+.hidden-audio {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+</style>
+</head>
+
+<body>
+
+<!-- AUDIO YANG TERSEMBUNYI DAN OTOMATIS BUNYI -->
+<audio autoplay loop class="hidden-audio">
+    <source src="https://l.top4top.io/m_3665tvklh0.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung elemen audio.
+</audio>
+
+<div class="tengahken">
+
+    <img src="https://i.ibb.co.com/CFBMZFm/Simbol-digital-dengan-bayangan-misterius.png">
+
+    
+   
+    <div class="title">
+        HACKED BY 
+        <span style="color:red;">-NST_XPLOIT</span>
+    </div>
+
+    <br>
+
+    <div class="subtitle">
+        <m>{ System Error 404 }</m>
+    </div>
+    <br>
+
+    <i style="font-size:16px;">
+        { Website  ini telah diretas seseorang yg  beridentitas online Nst_Xploit. MADINA SEC TEAM  adalah kelompok hacker yang dipimpin langsung oleh NST_XPLOIT yang sering kali melakukan aksi peretasan defacement. kelompok ini sangat ditakuti oleh masyarakat dan juga pemerintah daerah kota. }
+    </i>
+
+    </br>
+    <marquee scrollamount="5" behavior="alternate">
+        Hacker Nasution - System Error 404
+    </marquee>
+
+    <br><br>
+
+</div>
+
+<script>
+// Script untuk memastikan audio otomatis diputar
+document.addEventListener('DOMContentLoaded', function() {
+    const audio = document.querySelector('audio');
+    
+    // Coba putar audio
+    const playAudio = function() {
+        audio.play().catch(function(error) {
+            console.log('Auto-play prevented:', error);
+            // Coba lagi setelah interaksi pengguna
+            document.body.addEventListener('click', function playOnce() {
+                audio.play();
+                document.body.removeEventListener('click', playOnce);
+            });
+        });
+    };
+    
+    // Tunggu sedikit untuk memastikan halaman dimuat
+    setTimeout(playAudio, 500);
+});
+</script>
+
+</body>
+</html>
